@@ -9,8 +9,8 @@ public class Main
     static public void main(String[] args)
     {
         task__Palindrome();
-        task__MissingWord();
-        task__Pangram();
+//        task__MissingWord();
+//        task__Pangram();
     }
 
     private static void task__Palindrome()
@@ -71,6 +71,8 @@ public class Main
         System.out.println(PangramTester.isPangram(letters) ? "pangram" : "not pangram");
 
     }
+    // todo missing word переделать
+    // анаграмма
 
 
     private static String read(String message)
