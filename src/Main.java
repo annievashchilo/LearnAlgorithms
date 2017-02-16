@@ -8,9 +8,10 @@ public class Main
 {
     static public void main(String[] args)
     {
-        task__Palindrome();
+//        task__Palindrome();
 //        task__MissingWord();
 //        task__Pangram();
+        task__Anagram();
     }
 
     private static void task__Palindrome()
@@ -70,6 +71,17 @@ public class Main
 
         System.out.println(PangramTester.isPangram(letters) ? "pangram" : "not pangram");
 
+    }
+
+    private static void task__Anagram()
+    {
+        System.out.println("TASK: making anagrams");
+
+        String first = read("Enter the first string: ");
+        String second = read("Enter the second string: ");
+
+        System.out.println("Number of characters to delete: " +
+                AnagramTask.numberNeeded(first, second));
     }
     // todo missing word переделать
     // анаграмма
