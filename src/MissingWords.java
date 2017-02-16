@@ -9,7 +9,7 @@ public class MissingWords
 
         if (!word.isEmpty())
         {
-            sentence = sentence.replaceAll(word, " ");
+            sentence = sentence.replace(word, " ");
         }
 
         return sentence.split("\\s+");

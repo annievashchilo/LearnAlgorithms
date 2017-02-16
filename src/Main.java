@@ -9,9 +9,9 @@ public class Main
     static public void main(String[] args)
     {
 //        task__Palindrome();
-//        task__MissingWord();
+        task__MissingWord();
 //        task__Pangram();
-        task__Anagram();
+//        task__Anagram();
     }
 
     private static void task__Palindrome()
