@@ -1,3 +1,5 @@
+import com.sun.org.apache.regexp.internal.RE;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,9 +11,10 @@ public class Main
     static public void main(String[] args)
     {
 //        task__Palindrome();
-        task__MissingWord();
+//        task__MissingWord();
 //        task__Pangram();
 //        task__Anagram();
+        task__FirstRepeatedWord();
     }
 
     private static void task__Palindrome()
@@ -83,9 +86,17 @@ public class Main
         System.out.println("Number of characters to delete: " +
                 AnagramTask.numberNeeded(first, second));
     }
-    // todo missing word переделать
-    // анаграмма
 
+    private static void task__FirstRepeatedWord()
+    {
+        System.out.println("TASK: find the first repeated word");
+
+        String sentence = read("Enter the sentence: ");
+
+        System.out.println("The first repeated word: " + RepeatedWord.findRepeatedWord(sentence));
+
+
+    }
 
     private static String read(String message)
     {
