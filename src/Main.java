@@ -44,7 +44,7 @@ public class Main
         String s = read("Enter sentence: ");
         String t = read("Enter word: ");
 
-        String[] words = MissingWords.excludeWord(s, t);
+        String[] words = MissingWords.missingWords(s, t);
 
         for (String word : words)
         {
