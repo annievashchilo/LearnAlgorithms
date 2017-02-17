@@ -1,10 +1,12 @@
-import com.sun.org.apache.regexp.internal.RE;
+import calculator.Calculator;
+import calculator.Parser;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
+
 
 public class Main
 {
@@ -14,7 +16,8 @@ public class Main
 //        task__MissingWord();
 //        task__Pangram();
 //        task__Anagram();
-        task__FirstRepeatedWord();
+//        task__FirstRepeatedWord();
+        task__Calculator();
     }
 
     private static void task__Palindrome()
@@ -96,6 +99,15 @@ public class Main
         System.out.println("The first repeated word: " + RepeatedWord.findRepeatedWord(sentence));
 
 
+    }
+
+    private static void task__Calculator()
+    {
+        System.out.println("TASK: calculate the simplest equation");
+
+        String s = read("Enter the equation: ");
+
+        System.out.println("Result = " + Calculator.calculate(Parser.parse(s)));
     }
 
     private static String read(String message)
