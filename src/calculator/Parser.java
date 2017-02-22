@@ -17,7 +17,7 @@ public class Parser
                 result.add(buffer.toString());
                 result.add(String.valueOf(letter));
                 buffer.setLength(0);
-            } else if (letter >= '0' && letter <= '9')
+            } else if (Character.isDigit(letter))
             {
                 buffer.append(letter);
             }

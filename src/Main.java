@@ -18,6 +18,7 @@ public class Main
 //        task__Anagram();
 //        task__FirstRepeatedWord();
         task__Calculator();
+        task__SuperReducedString();
     }
 
     private static void task__Palindrome()
@@ -105,9 +106,34 @@ public class Main
     {
         System.out.println("TASK: calculate the simplest equation");
 
-        String s = read("Enter the equation: ");
+//        String s = read("Enter the equation: ");
+
+        String s = "1 +2 + 3 + 4 -5 + 6";
 
         System.out.println("Result = " + Calculator.calculate(Parser.parse(s)));
+    }
+
+    private static void task__SuperReducedString()
+    {
+        System.out.println("TASK: reduce String s as much as possible");
+
+        String s = read("Enter string: ");
+
+        System.out.println(SuperReducedString.reduceString(s).length() != 0 ? s : "Empty String");
+    }
+
+
+    private static void task__CaesarCipher()
+    {
+        System.out.println("TASK: Caesar Cipher");
+
+        String length = read("Enter string length: ");
+        String msg = read("Enter message to encrypt: ");
+        String shift = read("Enter shift: ");
+
+        System.out.println(CaesarCipher.encrypt(msg, Integer.parseInt(length), Integer.parseInt(shift)));
+
+
     }
 
     private static String read(String message)
